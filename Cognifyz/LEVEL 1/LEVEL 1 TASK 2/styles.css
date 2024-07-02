@@ -1,0 +1,65 @@
+body{
+    min-height: 100vh;
+    background:url('images/wallpaperflare.com_wallpaper.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Nunito", sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;/* top-bottom and left-right */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index:100;
+    box-sizing: border-box;
+}
+
+.logo{
+    font-size: 30px;
+    color:rgb(21, 11, 132);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.navbar{
+    display:flex;
+    gap:40px;
+}
+.navbar a {
+    font-size: 18px;
+    color: rgb(21, 11, 132);;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+}
+.navbar a::before{
+    content: '';
+    position:absolute;
+    top:100% ;
+    left:0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+
+}
+.navbar a:hover::before{
+width:100%
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 50px; 
+    z-index: 1;
+}

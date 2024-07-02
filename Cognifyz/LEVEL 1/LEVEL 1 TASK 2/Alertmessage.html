@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="level2.css">
+</head>
+<header>
+    <a href="L1T2.html" class="logo">Kamal</a>
+    <nav class="navbar">
+        <a href="Changeofcolors.html">Change of color</a>
+        <a href="Alertmessage.html">Alert Message</a>
+        <a href="Addition.html">Addition</a>
+    </nav>
+</header>
+<body>
+    <div class="container">
+    <button class="button" id="color" onclick="displayGreeting()">Show Greeting</button>
+</div>
+<script>
+    function displayGreeting() {
+    var today = new Date();
+    var hour = today.getHours();
+    var greeting;
+
+    if (hour < 12) {
+        greeting = "Good morning!";
+    } else if (hour < 18) {
+        greeting = "Good afternoon!";
+    } else if (hour < 22) {
+        greeting = "Good evening!";
+    } else {
+        greeting = "Good night!";
+    }
+
+    alert(greeting);
+}
+</script>
+</body>
+</html>

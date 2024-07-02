@@ -1,0 +1,189 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('images/wallpaperflare.com_wallpaper.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  padding: 20px 40px; /* top-bottom and left-right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: rgb(21, 11, 132);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+}
+
+.navLinks a {
+  color: rgb(21, 11, 132);
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  font-weight: 700;
+  padding: 20px 0;
+  line-height: 1.5; /* Ensure consistent line-height */
+  transition: color 0.3s; /* Added transition for color */
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: background-color 0.3s; /* Added transition for background color */
+}
+
+.hamburger:hover div {
+  background-color: #fff; /* Change background color on hover */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Adjusted to account for header height */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(21, 13, 91);
+    position: absolute;
+    top: 60px;
+    right: 0; /* Align to the right */
+  }
+
+  .navLinks a {
+    padding: 30px 0;
+    border-top: 3px solid #d49696;
+    color: rgb(155, 155, 177);
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .navLinks a:last-child {
+    border-bottom: 3px solid #d49696;
+    padding-top: 70px;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto; /* Align to the right */
+  }
+}
+
+  
+  .body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.container {
+    width: auto;
+    height: auto;
+    background-color:#e9e6e1; 
+    padding: 20px;
+    margin: 225px;
+    text-align: center;
+    color: #030406; 
+    font-size: 18px;
+    background:#ebda938d;
+    border-radius: 10px;
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.form-group label {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.user {
+    text-decoration: none;
+    color: #030406;
+    margin-left: 5px; 
+}
+
+.button {
+    border-radius: 4px;
+    background: #359db6;
+    border: 0;
+    color: #030406;
+    font-size: 20px;
+    padding: 6px;
+    margin: 12px 25px 12px 0; 
+    font-weight: 200;
+}
+  
+  

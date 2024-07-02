@@ -1,0 +1,235 @@
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('images/wallpaperflare.com_wallpaper.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  padding: 20px 40px; /* top-bottom and left-right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: rgb(21, 11, 132);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+}
+
+.navLinks a {
+  color: rgb(21, 11, 132);
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  font-weight: 700;
+  padding: 20px 0;
+  line-height: 1.5; /* Ensure consistent line-height */
+  transition: color 0.3s; /* Added transition for color */
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+  transition: background-color 0.3s; /* Added transition for background color */
+}
+
+.hamburger:hover div {
+  background-color: #fff; /* Change background color on hover */
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Adjusted to account for header height */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(21, 13, 91);
+    position: absolute;
+    top: 60px;
+    right: 0; /* Align to the right */
+  }
+
+  .navLinks a {
+    padding: 30px 0;
+    border-top: 3px solid #d49696;
+    color: rgb(30, 30, 100);
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .navLinks a:last-child {
+    border-bottom: 3px solid #d49696;
+    padding-top: 70px;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto; /* Align to the right */
+  }
+}
+
+  .bodye {
+    background-image: url('images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Add some space between form groups */
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Add space between label and input */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px; /* Add some space between input and label */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .form-check input[type="radio"] {
+    margin-right: 10px; /* Add some space between radio buttons and labels */
+}
+
+.button {
+    border-radius: 4px;
+    background: #359db6;
+    border: 0;
+    color: #030406;
+    font-size: 20px;
+    padding: 6px;
+    margin: 12px 0px 12px 0;
+    font-weight: 200;
+}
+
+/* New styles for horizontal input arrangement */
+.form-row {
+    display: flex;
+    gap: 40px; /* Increase the gap between the fields */
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1; /* Make the form groups in the row take equal space */
+}
+
+/* Styles to align telephone label and input */
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group-prepend {
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Adjust padding for better alignment */
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group input[type="tel"] {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.container {
+    width: 500px;
+    height: auto;
+    background-color: #e9e6e1;
+    padding: 20px;
+    margin: 100px auto; /* Center the container and adjust the top margin */
+    text-align: center;
+    color: #030406;
+    font-size: 18px;
+    background: #ebda938d;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
